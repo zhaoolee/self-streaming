@@ -1,0 +1,10 @@
+services:
+  srs:
+    image: ossrs/srs:6
+    container_name: srs
+    ports:
+      - "11935:1935"   # RTMP ingest
+      - "38081:38081"   # HTTP (HLS/FLV)
+    volumes:
+      - ./srs.conf:/usr/local/srs/conf/srs.conf:ro
+    command: ["./objs/srs", "-c", "/usr/local/srs/conf/srs.conf"]
