@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  basePath: "/live",
+  basePath: "/live-web",
+  trailingSlash: true
 };
 
 export default nextConfig;
